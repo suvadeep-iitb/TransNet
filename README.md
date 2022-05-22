@@ -6,10 +6,10 @@ The implementation is composed of the following files:
 * **transformer.py:** It contains the code of TransNet model.
 * **train_trans.py** It contains the code for training and evaluating the TransNet model.
 * **data_utils_\<dataset\>.py:** It contains the code for reading the dataset \<dataset\> where \<dataset\> is one of ASCAD, AES HD, AES RD and DPA contest v4.2.
-* **evaluation_utils_\<dataset\>.py:** It contains the code for computing the mean key ranks for the dataset \<dataset\> where \<dataset\> is one of ASCAD, AES HD, AES RD and DPA contest v4.2.
+* **evaluation_utils_\<dataset\>.py:** It contains the code for computing the mean key ranks for the dataset \<dataset\> where \<dataset\> is one of the above.
 * **exp_script_\<dataset\>.sh:** It is the bash script with proper hyper-parameter setting to perform experiments on dataset \<dataset\>.
 * **\<dataset\>\_exp_colab.ipynb:** It is the Google Colab script with proper hyper-parameter setting to perform experiments on dataset \<dataset\>.
-* **datasets:** This the folder containing the four datasets: ASCAD, AES HD, AES RD and DPA contest v4.2 in compressed format.
+* **datasets:** It is the folder containing the four datasets: ASCAD, AES HD, AES RD and DPA contest v4.2 in compressed format.
 
 The datasets are obtained from [this repository](https://github.com/gabzai/Methodology-for-efficient-CNN-architectures-in-SCA).
 
