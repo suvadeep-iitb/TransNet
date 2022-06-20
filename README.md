@@ -1,6 +1,6 @@
-# TransNet: Shift Invariant Transformer Network for Power Attack
+# TransNet: Shift Invariant Transformer Network for Side Channel Analysis
 
-This repository contains the implementation of TransNet, a shift invariant transformer network for Power Attack ([eprint](https://eprint.iacr.org/2021/827)).
+This repository contains the implementation of TransNet, a shift invariant transformer network for Side Channel Analysis ([eprint](https://eprint.iacr.org/2021/827)).
 
 The implementation is composed of the following files:
 * **transformer.py:** It contains the code of TransNet model.
