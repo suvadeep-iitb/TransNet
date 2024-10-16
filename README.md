@@ -1,6 +1,6 @@
 # TransNet: Shift Invariant Transformer Network for Side Channel Analysis
 
-This repository contains the implementation of TransNet, a shift invariant transformer network for Side Channel Analysis ([eprint](https://eprint.iacr.org/2021/827)).
+This repository contains the implementation of TransNet, a shift invariant transformer network for Side Channel Analysis ([paper](https://link.springer.com/chapter/10.1007/978-3-031-17433-9_16)).
 
 The implementation is composed of the following files:
 * **transformer.py:** It contains the code of TransNet model.
@@ -19,18 +19,26 @@ The datasets are obtained from [this repository](https://github.com/gabzai/Metho
 
 ## Citation:
 ```
-@article{DBLP:journals/iacr/HajraSAM21,
-  author    = {Suvadeep Hajra and
-               Sayandeep Saha and
-               Manaar Alam and
-               Debdeep Mukhopadhyay},
-  title     = {TransNet: Shift Invariant Transformer Network for Power Attack},
-  journal   = {{IACR} Cryptol. ePrint Arch.},
-  pages     = {827},
-  year      = {2021},
-  url       = {https://eprint.iacr.org/2021/827},
-  timestamp = {Wed, 07 Jul 2021 12:09:31 +0200},
-  biburl    = {https://dblp.org/rec/journals/iacr/HajraSAM21.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{DBLP:conf/africacrypt/HajraSAM22,
+  author       = {Suvadeep Hajra and
+                  Sayandeep Saha and
+                  Manaar Alam and
+                  Debdeep Mukhopadhyay},
+  editor       = {Lejla Batina and
+                  Joan Daemen},
+  title        = {TransNet: Shift Invariant Transformer Network for Side Channel Analysis},
+  booktitle    = {Progress in Cryptology - {AFRICACRYPT} 2022: 13th International Conference
+                  on Cryptology in Africa, {AFRICACRYPT} 2022, Fes, Morocco, July 18-20,
+                  2022, Proceedings},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {13503},
+  pages        = {371--396},
+  publisher    = {Springer Nature Switzerland},
+  year         = {2022},
+  url          = {https://doi.org/10.1007/978-3-031-17433-9\_16},
+  doi          = {10.1007/978-3-031-17433-9\_16},
+  timestamp    = {Sun, 10 Dec 2023 00:28:26 +0100},
+  biburl       = {https://dblp.org/rec/conf/africacrypt/HajraSAM22.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 ```
