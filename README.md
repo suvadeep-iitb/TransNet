@@ -44,11 +44,11 @@ This repository provides the official implementation of **TransNet**, a shift-in
    ```
 3. Train TransNet:
    ```bash
-   bash exp_script_ASCAD.sh train
+   bash exp_script_ascad.sh train
    ```
 4. Perform Evaluation:
    ```bash
-   bash exp_script_ASCAD.sh test
+   bash exp_script_ascad.sh test
    ```
 
 You can also open the corresponding Google Colab notebook for an interactive demo.
