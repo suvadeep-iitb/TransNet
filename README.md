@@ -1,24 +1,63 @@
 # TransNet: Shift Invariant Transformer Network for Side Channel Analysis
 
-This repository contains the implementation of TransNet, a shift invariant transformer network for Side Channel Analysis ([paper](https://link.springer.com/chapter/10.1007/978-3-031-17433-9_16)).
+This repository provides the official implementation of **TransNet**, a shift-invariant Transformer architecture designed for **Side-Channel Analysis (SCA)**. For details, please refer to our [paper (AFRICACRYPT 2022)](https://link.springer.com/chapter/10.1007/978-3-031-17433-9_16).
 
-The implementation is composed of the following files:
-* **transformer.py:** It contains the code of TransNet model.
-* **train_trans.py** It contains the code for training and evaluating the TransNet model.
-* **data_utils_\<dataset\>.py:** It contains the code for reading the dataset \<dataset\> where \<dataset\> is one of ASCAD, AES HD, AES RD and DPA contest v4.2.
-* **evaluation_utils_\<dataset\>.py:** It contains the code for computing the mean key ranks for the dataset \<dataset\> where \<dataset\> is one of the above.
-* **exp_script_\<dataset\>.sh:** It is the bash script with proper hyper-parameter setting to perform experiments on dataset \<dataset\>.
-* **\<dataset\>\_exp_colab.ipynb:** It is the Google Colab script with proper hyper-parameter setting to perform experiments on dataset \<dataset\>.
-* **datasets:** It is the folder containing the four datasets: ASCAD, AES HD, AES RD and DPA contest v4.2 in compressed format.
+---
 
-The datasets are obtained from [this repository](https://github.com/gabzai/Methodology-for-efficient-CNN-architectures-in-SCA).
+## Repository Structure
+- **`transformer.py`** — Implementation of the TransNet model.
+- **`train_trans.py`** — Training and evaluation scripts for TransNet.
+- **`data_utils_\<dataset\>.py`** — Dataset readers for `<dataset> ∈ {ASCAD, AES HD, AES RD, DPA contest v4.2}`.
+- **`evaluation_utils_\<dataset\>.py`** — Utilities to compute mean key ranks for each dataset.
+- **`exp_script_\<dataset\>.sh`** — Bash scripts with recommended hyperparameter settings for experiments.
+- **`\<dataset\>\_exp_colab.ipynb`** — Google Colab notebooks for quick experiments on each dataset.
+- **`datasets/`** — Contains compressed versions of the four datasets (sourced from [this repository](https://github.com/gabzai/Methodology-for-efficient-CNN-architectures-in-SCA)).
+
+---
 
 ## Data Pre-processing:
-* The traces of AES RD dataset have been subtracted by the constant 180 to make the values centered around 0.
-* The traces of DPA contest v4.2 have been multiplied by the constant 2000 to extend the range of the values to [-128, 128].
+- **AES RD dataset:** traces are shifted by subtracting `180` (centering around `0`).  
+- **DPA contest v4.2 dataset:** traces are scaled by multiplying with `2000` (extending range to `[-128, 128]`).  
+
+---
+
+## Tested on
+- Python 3.8.10  
+- absl-py == 2.3.1 
+- numpy == 1.24.3
+- scipy == 1.10.1
+- h5py == 3.11.0
+- tensorflow == 2.13.0
+
+---
+
+## Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/suvadeep-iitb/TransNet.git
+   cd TransNet
+   ```
+2. **Install dependencies (Python >= 3.8 recommended):**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Train TransNet:
+   ```bash
+   bash exp_script_ASCAD.sh train
+   ```
+4. Perform Evaluation:
+   ```bash
+   bash exp_script_ASCAD.sh test
+   ```
+
+You can also open the corresponding Google Colab notebook for an interactive demo.
+
+---
 
 ## Citation:
-```
+If you use TransNet in your research, please cite:
+```bibtex
 @inproceedings{DBLP:conf/africacrypt/HajraSAM22,
   author       = {Suvadeep Hajra and
                   Sayandeep Saha and
